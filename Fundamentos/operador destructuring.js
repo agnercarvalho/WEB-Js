@@ -11,7 +11,7 @@ const pessoa = {
 const { nome, idade } = pessoa  //tira do obj pessoa o nome e idade
 console.log(nome,idade)
 
-const { nome: n, idade: i} = pessoa  //tira do obj e cria variaveis
+const { nome: n, idade: i} = pessoa  //tira do obj e atribui as variaveis n e i 
 console.log(n,i)
 
 const { sobrenome, casa = true } = pessoa     //cria um valor padrão para casa
