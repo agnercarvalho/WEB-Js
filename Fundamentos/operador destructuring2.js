@@ -3,6 +3,9 @@
 const [a] = [10]
 console.log(a)
 
+const [n1, ,n3, ,n5,n6] = [1,2,3,4,5,6,7];   // ignora alguns elementos do array
+console.log(n1, n3, n5, n6);
+
 //Aula 66
 
 function rand({min=0, max=1000}){
