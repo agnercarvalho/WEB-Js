@@ -38,9 +38,9 @@ const fusca = {
 const fiat147 = {
     modelo: 'fiat 147',
     velMax: 80,
-    status(){
+    status(){    // sobrescreve o método 'status' do pai
         return `${this.modelo}: ${super.status()}`;
-    } // Super chama o pai!
+    } // Super chama o método que está no protótipo pai
 }
 
 Object.setPrototypeOf(fusca, carro); //fusca tem carro como protótipo (objeto + protótipo) é o mesmo que __proto__: carro
