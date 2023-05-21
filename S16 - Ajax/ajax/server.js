@@ -10,7 +10,7 @@ app.use(bodyParser.json())  //aplica nas requisições JSON, transformando-as em
 
 const multer = require('multer')
 const storage = multer.diskStorage({
-    destination: function(req,file,callback){
+    destination: function(req, file,callback){
         callback(null,'./upload')
     },
     filename: function(req, file, callback){
@@ -18,9 +18,13 @@ const storage = multer.diskStorage({
     }
 })
 
-const upload = multer({ storage }).single('arquivo')
+const upload = multer({ storage }).single('arquivo') //imput da requisição no html
 
 app.post('/upload', (req,res) =>{
+    upload(req, res, err =>{
+        if (err){ return res.end("Ocorreu um erro")}
+        res.end('Concluido com sucesso')
+    })
 }) 
 
 app.listen(8080,() => console.log("Executando..."))

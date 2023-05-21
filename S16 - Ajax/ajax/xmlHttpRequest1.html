@@ -13,19 +13,19 @@
     <script>
         function ajax(config){
             const xhr = new XMLHttpRequest()  //objeto padronizado 
-            xhr.open(config.metodo, config.url, true)
+            xhr.open(config.metodo, config.url, true)  //metodos de sucesso/erro , url , true = assincrono
 
-            xhr.onload = e => {
-                if(xhr.status === 200){
+            xhr.onload = e => {   // função que é executada onload
+                if(xhr.status === 200){   //caso seja sucesso
                     config.sucesso(xhr.response)
-                }else if (xhr.status >= 400) {
+                    console.log(xhr)
+                }else if (xhr.status >= 400) {  //casp dê erro
                     config.erro({
                         codigo: xhr.status,
                         texto: xhr.statusText
                     })
                 }
             }
-
             xhr.send()
         }
 
