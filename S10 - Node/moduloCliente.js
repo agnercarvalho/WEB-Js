@@ -1,4 +1,4 @@
-const moduloA = require('./moduloA')
+const moduloA = require('./moduloA') //importa (acessa) o módulo A
 const moduloB = require('./moduloB')
 
 console.log(moduloA.ola)

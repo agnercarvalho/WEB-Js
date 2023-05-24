@@ -1,2 +1,2 @@
-const _ = require('lodash');
+const _ = require('lodash'); /* geralmente o loadash é referenciado com o nome de _ - ele pesquisa automaticamente o index.js dentro de node_modules*/
 setInterval(() => console.log(_.random(1,1000)), 2000)
