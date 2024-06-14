@@ -11,4 +11,8 @@ const resultado = alunos.map(a => a.nota).reduce(function(acumulador, atual) {
     return acumulador + atual
 }, 0)
 
+
+// Reduce recebe como parametros uma função de callback com os argumentos 'acumulador' e item atual + o valor inicial
+// array.reduce(callback(), valor_inicial)
+
 console.log(resultado)
