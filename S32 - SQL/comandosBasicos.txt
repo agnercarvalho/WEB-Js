@@ -1,0 +1,28 @@
+Comandos MYSQL
+
+mysql --version    //mostra a versão
+
+mysql -u root -p    //loga no sistema mysql e pede a senha root
+
+create schema wm;   //cria um esquema chamado wm
+
+use wm;   //cooloca o schema wm em uso
+
+quit; //fecha o terminal
+
+
+
+---- criando usuários
+
+CREATE USER 'novousuario'@'localhost' IDENTIFIED BY '123456'; //Cria um novo usuário com a senha terminal
+
+GRANT ALL PRIVILEGES ON * . * TO 'novousuario'@'localhost';  //dá todos os privilégios de acesso ao usuário (Os asteriscos representam o banco e a tabela, respectivamente, e esse comando permite ao usuário executar todas as tarefas nas bases de dados e tabelas.)
+
+FLUSH PRIVILEGES;     //Atualiza as permissões
+
+DROP USER ‘novousuario’@‘localhost’;   //Remove um usuário
+
+
+-- modificando a senha 
+
+ALTER USER 'novousuario'@'localhost' IDENTIFIED BY 'NovaSenha';
